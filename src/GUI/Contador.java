@@ -41,22 +41,6 @@ public class Contador extends JFrame {
 	protected boolean controldinero=true;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Contador window = new Contador();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the application.
 	 */
 	public Contador() {
@@ -190,6 +174,7 @@ public class Contador extends JFrame {
 		buttonatras.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				frame.setVisible(false);
 				Entrada p = new Entrada();
 				p.frame.setVisible(true);
 			}

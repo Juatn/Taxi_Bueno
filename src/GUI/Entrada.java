@@ -16,27 +16,12 @@ import java.awt.Color;
 
 public class Entrada extends JFrame {
 
-	protected JFrame frame;
+	 public JFrame frame;
 	private JButton buttonsubidaviajero;
 	private JButton buttoncaja;
 	protected ArrayList<Cliente> listaclientes;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Entrada window = new Entrada();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Create the application.
 	 */
