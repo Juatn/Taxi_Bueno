@@ -67,7 +67,7 @@ public class Entrada extends JFrame {
 		frame.getContentPane().add(buttonsubidaviajero);
 
 		buttoncaja = new JButton("Caja dia");
-		buttoncaja.setBackground(new Color(204, 255, 153));
+		buttoncaja.setBackground(new Color(204, 255, 255));
 		buttoncaja.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
