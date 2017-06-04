@@ -38,6 +38,7 @@ public class Contador extends JFrame {
 	private JTextPane textCambio;
 	private JButton buttoncambio;
 	protected static double dineroencaja;
+	protected boolean controldinero=true;
 
 	/**
 	 * Launch the application.
@@ -251,7 +252,11 @@ public class Contador extends JFrame {
 					JOptionPane.showMessageDialog(null, "FALTAN " + cambio + " Euros", "EEH!",
 							JOptionPane.ERROR_MESSAGE);
 				}
+				if(controldinero){
 				dineroencaja = dineroencaja + (dinerorecibido - cambio);
+				controldinero=false;
+				
+			}
 			}
 
 		});
