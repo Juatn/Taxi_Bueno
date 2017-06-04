@@ -12,6 +12,9 @@ import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import javax.swing.SwingConstants;
+
+import Models.Cliente;
+
 import javax.swing.JTextPane;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
@@ -174,6 +177,8 @@ public class Contador extends JFrame {
 		buttonatras.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				
+				
 				frame.setVisible(false);
 				Entrada p = new Entrada();
 				p.frame.setVisible(true);
