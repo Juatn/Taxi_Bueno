@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Date;
 import java.awt.Color;
+import java.awt.SystemColor;
 
 public class Entrada extends JFrame {
 
@@ -34,12 +35,13 @@ public class Entrada extends JFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(255, 204, 0));
+		frame.getContentPane().setBackground(SystemColor.menu);
 		frame.setBounds(100, 100, 727, 520);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
 		buttonsubidaviajero = new JButton("Subida Viajero");
+		buttonsubidaviajero.setBackground(new Color(255, 255, 153));
 		buttonsubidaviajero.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -65,6 +67,7 @@ public class Entrada extends JFrame {
 		frame.getContentPane().add(buttonsubidaviajero);
 
 		buttoncaja = new JButton("Caja dia");
+		buttoncaja.setBackground(new Color(204, 255, 153));
 		buttoncaja.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

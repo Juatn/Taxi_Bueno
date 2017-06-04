@@ -20,6 +20,7 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Date;
+import java.awt.SystemColor;
 
 public class Contador extends JFrame {
 
@@ -56,7 +57,7 @@ public class Contador extends JFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(255, 204, 0));
+		frame.getContentPane().setBackground(SystemColor.menu);
 		frame.setBounds(100, 100, 650, 596);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
