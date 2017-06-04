@@ -3,6 +3,7 @@ package GUI;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import Models.Cliente;
 
@@ -83,12 +84,13 @@ public class Entrada extends JFrame {
 		buttoncaja.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+				JOptionPane.showMessageDialog(null, "Hoy has ganado "+Contador.dineroencaja+"Euros", "CAJA", JOptionPane.INFORMATION_MESSAGE);
 				
 			}
 		});
 		buttoncaja.setBounds(402, 128, 221, 142);
-		frame.getContentPane().add(buttoncaja);
+		frame.getContentPane().
+		add(buttoncaja);
 	}
 
 }

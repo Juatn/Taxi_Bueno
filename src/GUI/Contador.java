@@ -37,6 +37,7 @@ public class Contador extends JFrame {
 	private JLabel lblCambio;
 	private JTextPane textCambio;
 	private JButton buttoncambio;
+	protected static double dineroencaja;
 
 	/**
 	 * Launch the application.
@@ -176,6 +177,14 @@ public class Contador extends JFrame {
 		frame.getContentPane().add(textdinerorecibido);
 
 		buttonatras = new JButton("Volver atras");
+		buttonatras.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Entrada p=new Entrada();
+				p.frame.setVisible(true);
+			}
+		});
+		buttonatras.setBackground(new Color(255, 102, 102));
 		buttonatras.setBounds(411, 377, 139, 45);
 		frame.getContentPane().add(buttonatras);
 
@@ -231,7 +240,9 @@ public class Contador extends JFrame {
 				if(dinerorecibido<dineroapagar){
 					JOptionPane.showMessageDialog(null, "FALTAN "+cambio+" Euros", "EEH!", JOptionPane.ERROR_MESSAGE);
 				}
+				dineroencaja=dineroencaja+(dinerorecibido-cambio);
 			}
+			
 		});
 		buttoncambio.setBounds(15, 372, 152, 29);
 		frame.getContentPane().add(buttoncambio);
