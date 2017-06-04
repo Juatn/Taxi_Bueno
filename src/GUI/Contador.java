@@ -170,6 +170,7 @@ public class Contador extends JFrame {
 		frame.getContentPane().add(lbldinerorecibido);
 
 		textdinerorecibido = new JTextPane();
+		textdinerorecibido.setText("0");
 		textdinerorecibido.setBounds(199, 411, 89, 26);
 		textdinerorecibido.setVisible(false);
 		frame.getContentPane().add(textdinerorecibido);
@@ -197,6 +198,7 @@ public class Contador extends JFrame {
 		frame.getContentPane().add(lblCambio);
 
 		textCambio = new JTextPane();
+		textCambio.setText("0");
 		textCambio.setEnabled(false);
 		textCambio.setBounds(199, 470, 89, 26);
 		textCambio.setVisible(false);
@@ -216,7 +218,7 @@ public class Contador extends JFrame {
 				double cambio=dinerorecibido-dineroapagar;
 				// Comprobar que haya introducido dinero y mostrar cambio
 				
-				if(dinerorecibido>dineroapagar){
+				if(dinerorecibido>=dineroapagar){
 					lblCambio.setVisible(true);
 					textCambio.setVisible(true);
 					
