@@ -10,9 +10,10 @@ public class Cliente {
 
 	public Cliente(Date horaentrada) {
 		this.horaentrada = horaentrada;
+		this.horasalida = setHorasalida(horasalida);
+		this.dinero = setDinero(dinero);
 	}
 
-	
 	public Date getHoraentrada() {
 		return horaentrada;
 	}
@@ -25,18 +26,16 @@ public class Cliente {
 		return horasalida;
 	}
 
-	public void setHorasalida(Date horasalida) {
-		this.horasalida = horasalida;
+	public Date setHorasalida(Date horasalida) {
+		return this.horasalida = horasalida;
 	}
 
 	public String getDinero() {
 		return dinero;
 	}
 
-	public void setDinero(String dinero) {
-		this.dinero = dinero;
+	public String setDinero(String dinero) {
+		return this.dinero = dinero;
 	}
 
-	
-	
 }

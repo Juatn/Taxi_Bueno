@@ -19,6 +19,7 @@ import javax.swing.JTextPane;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Date;
 
 public class Contador extends JFrame {
 
@@ -178,7 +179,10 @@ public class Contador extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				
+				// Anadir fecha salida cliente
+				Date c=new Date();
+				Entrada.c1.setHorasalida(c);
+				Entrada.c1.setDinero(lbDinero.getText());
 				frame.setVisible(false);
 				Entrada p = new Entrada();
 				p.frame.setVisible(true);

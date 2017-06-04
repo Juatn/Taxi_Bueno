@@ -19,7 +19,8 @@ public class Entrada extends JFrame {
 	public JFrame frame;
 	private JButton buttonsubidaviajero;
 	private JButton buttoncaja;
-	protected static ArrayList<Cliente> listaclientes;
+	static Cliente c1;
+	
 
 	/**
 	 * Create the application.
@@ -46,9 +47,11 @@ public class Entrada extends JFrame {
 
 				Date fecha = new Date();
 
-				Cliente c1 = new Cliente(fecha);
-				listaclientes = new ArrayList<Cliente>();
-				listaclientes.add(c1);
+			      c1 = new Cliente(fecha);
+				
+				
+				
+				Contenedor.Lista.ListaClientes.add(c1);
 
 				// ABRIR VENTANA CON CONTADOR
 				frame.setVisible(false);
