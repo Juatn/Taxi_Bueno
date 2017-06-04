@@ -123,7 +123,7 @@ public class Contador extends JFrame {
 							}
 							segundos++;
 							lbcontador.setText("" + segundos);
-							if (segundos >= 2) {
+							if (segundos >= 60) {
 								dinero = dinero + tarifa;
 								segundos = 0;
 
