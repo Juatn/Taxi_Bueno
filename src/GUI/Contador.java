@@ -106,6 +106,15 @@ public class Contador extends JFrame {
 						int segundos = Integer.parseInt(lbcontador.getText());
 						double dinero = Double.parseDouble(lbDinero.getText());
 
+						if (radioaero.isSelected()) {
+							dinero=dinero+5.5;
+
+						}
+						if (radionocturna.isSelected()){
+							dinero=dinero+2;
+						}
+						
+
 						while (controlContador) {
 							try {
 								Thread.sleep(1000);
@@ -180,7 +189,7 @@ public class Contador extends JFrame {
 		buttonatras.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Entrada p=new Entrada();
+				Entrada p = new Entrada();
 				p.frame.setVisible(true);
 			}
 		});
@@ -212,37 +221,39 @@ public class Contador extends JFrame {
 		textCambio.setBounds(199, 470, 89, 26);
 		textCambio.setVisible(false);
 		frame.getContentPane().add(textCambio);
-		
+
 		buttoncambio = new JButton("Calcular Cambio");
 		buttoncambio.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				lbldinerorecibido.setVisible(true);
 				textdinerorecibido.setVisible(true);
-				
+
 				// DAR CAMBIO
-				//variables
+				// variables
 				double dineroapagar = Double.parseDouble(lbDinero.getText());
-				double dinerorecibido= Double.parseDouble(textdinerorecibido.getText());
-				double cambio=dinerorecibido-dineroapagar;
+				double dinerorecibido = Double.parseDouble(textdinerorecibido.getText());
+				double cambio = dinerorecibido - dineroapagar;
 				// Comprobar que haya introducido dinero y mostrar cambio
-				
-				if(dinerorecibido>=dineroapagar){
+
+				if (dinerorecibido >= dineroapagar) {
 					lblCambio.setVisible(true);
 					textCambio.setVisible(true);
-					
-					textCambio.setText(""+cambio);
-					
+
+					textCambio.setText("" + cambio);
+
 				}
-				if(dinerorecibido==dineroapagar){
-					JOptionPane.showMessageDialog(null, "Me has dado el dinero justo", "Sin cambio", JOptionPane.INFORMATION_MESSAGE);
+				if (dinerorecibido == dineroapagar) {
+					JOptionPane.showMessageDialog(null, "Me has dado el dinero justo", "Sin cambio",
+							JOptionPane.INFORMATION_MESSAGE);
 				}
-				if(dinerorecibido<dineroapagar){
-					JOptionPane.showMessageDialog(null, "FALTAN "+cambio+" Euros", "EEH!", JOptionPane.ERROR_MESSAGE);
+				if (dinerorecibido < dineroapagar) {
+					JOptionPane.showMessageDialog(null, "FALTAN " + cambio + " Euros", "EEH!",
+							JOptionPane.ERROR_MESSAGE);
 				}
-				dineroencaja=dineroencaja+(dinerorecibido-cambio);
+				dineroencaja = dineroencaja + (dinerorecibido - cambio);
 			}
-			
+
 		});
 		buttoncambio.setBounds(15, 372, 152, 29);
 		frame.getContentPane().add(buttoncambio);
